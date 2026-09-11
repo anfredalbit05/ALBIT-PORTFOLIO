@@ -1,74 +1,106 @@
 <section class="contact">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
 
-    <div class="contact-header">
-        <p class="subtitle">Get In Touch</p>
-        <h1>Let's <span>Work Together</span></h1>
-        <p class="description">
-            I'm always open to discussing new opportunities, freelance work,
-            collaborations, or simply connecting with fellow developers.
+<div class="contact-container section">
+
+    <header class="contact-header">
+        <span class="section-tag">03 / Contact</span>
+
+        <h1>
+            Let's build something <span>great.</span>
+        </h1>
+
+        <p>
+            Have a project, opportunity, or idea in mind?
+            I'd be happy to hear about it and discuss how we can
+            turn it into something useful.
         </p>
-    </div>
 
-    <div class="contact-container">
+        <div class="contact-details">
 
-        <!-- Contact Information -->
-        <div class="contact-info">
-
-            <div class="info-card">
-                <div class="icon">📧</div>
+            <a href="mailto:anfredalbit110525@gmail.com" class="contact-item">
+                <div class="icon">✉</div>
                 <div>
-                    <h3>Email</h3>
-                    <p>anfredalbit110525@gmail.com</p>
+                    <small>Email</small>
+                    <strong>anfredalbit110525@gmail.com</strong>
                 </div>
-            </div>
+            </a>
 
-            <div class="info-card">
-                <div class="icon">📱</div>
+            <a href="tel:09158066395" class="contact-item">
+                <div class="icon">☎</div>
                 <div>
-                    <h3>Phone</h3>
-                    <p>09158066395</p>
+                    <small>Phone</small>
+                    <strong>09158066395</strong>
                 </div>
-            </div>
+            </a>
 
-            <div class="info-card">
-                <div class="icon">📍</div>
+            <div class="contact-item">
+                <div class="icon">⌖</div>
                 <div>
-                    <h3>Location</h3>
-                    <p>Tagum City, Davao del Norte, Philippines</p>
+                    <small>Location</small>
+                    <strong>Tagum City, Davao del Norte</strong>
                 </div>
             </div>
 
         </div>
+    </header>
 
-        <!-- Contact Form -->
-        <div class="contact-form">
+    <div class="contact-form-wrapper">
 
-            <form>
-
-                <div class="input-group">
-                    <input type="text" placeholder="Your Name">
-                </div>
-
-                <div class="input-group">
-                    <input type="email" placeholder="Your Email">
-                </div>
-
-                <div class="input-group">
-                    <input type="text" placeholder="Subject">
-                </div>
-
-                <div class="input-group">
-                    <textarea rows="6" placeholder="Your Message"></textarea>
-                </div>
-
-                <button type="submit" class="btn">
-                    Send Message
-                </button>
-
-            </form>
-
+        <div class="form-heading">
+            <span>Send a message</span>
+            <p>I'll get back to you as soon as possible.</p>
         </div>
 
+        <form>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input
+                        id="name"
+                        type="text"
+                        placeholder="Your name"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="you@example.com"
+                    >
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="subject">Subject</label>
+                <input
+                    id="subject"
+                    type="text"
+                    placeholder="What would you like to discuss?"
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Tell me about your project..."
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+                <span>Send Message</span>
+                <span class="arrow">→</span>
+            </button>
+
+        </form>
     </div>
+
+</div>
 
 </section>
