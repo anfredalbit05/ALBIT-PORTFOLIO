@@ -1,162 +1,724 @@
-<section class="about-page">
+<section
+    class="about-page"
+    (mousemove)="onMouseMove($event)"
+    [style.--mouse-x.px]="mouseX"
+    [style.--mouse-y.px]="mouseY">
+
+    <!-- Background -->
+    <div class="grid-background"></div>
+
+    <div class="cursor-glow"></div>
+
     <div class="glow glow-one"></div>
     <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
 
-<section class="hero section">
-    <div class="hero-content">
-        <span class="section-tag">02 / About Me</span>
-        <p class="eyebrow">Full Stack Developer</p>
+    <!-- Floating developer code -->
+    <div class="floating-code code-one">
+        const developer = true;
+    </div>
 
-        <h1>Hi, I'm <span>Anfred Albit.</span></h1>
+    <div class="floating-code code-two">
+        git commit -m "build future"
+    </div>
 
-        <p class="hero-description">
-            I build modern, responsive, and scalable web applications using
-            Angular, Laravel, Next.js, MySQL, PostgreSQL, and Supabase.
-            I also develop cross-platform mobile applications with Ionic Angular.
+    <div class="floating-code code-three">
+        npm run develop
+    </div>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero section reveal">
+
+        <div class="hero-content">
+
+            <span class="section-tag">
+                02 / About Me
+            </span>
+
+            <p class="eyebrow">
+                Full Stack Developer
+            </p>
+
+            <h1>
+                Hi, I'm
+                <span class="gradient-text">
+                    Anfred Albit.
+                </span>
+            </h1>
+
+            <p class="hero-description">
+                I'm a Full Stack Developer focused on building modern,
+                responsive, and scalable applications. I enjoy working
+                across frontend, backend, databases, APIs, and mobile
+                development to turn ideas into practical digital solutions.
+            </p>
+
+            <p class="hero-description secondary-description">
+                My primary technologies include Angular, Laravel,
+                Next.js, MySQL, PostgreSQL, Supabase, Firebase,
+                and Ionic Angular.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    routerLink="/contact"
+                    class="btn-primary"
+                >
+                    <span>Contact Me</span>
+                    <b>↗</b>
+                </a>
+
+                <a
+                    routerLink="/project"
+                    class="btn-secondary"
+                >
+                    <span>View Projects</span>
+                    <b>→</b>
+                </a>
+
+            </div>
+
+            <div class="hero-meta">
+
+                <div>
+                    <strong>Full Stack</strong>
+                    <span>Development</span>
+                </div>
+
+                <div>
+                    <strong>Web & Mobile</strong>
+                    <span>Applications</span>
+                </div>
+
+                <div>
+                    <strong>Modern</strong>
+                    <span>Technologies</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROFILE IMAGE
+        ========================== -->
+
+        <div class="hero-image">
+
+            <div class="image-glow"></div>
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="image-ring">
+
+                <div class="image-circle">
+
+                    <img
+                        src="images/profile.png"
+                        alt="Anfred Albit"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Floating status card -->
+
+            <div class="floating-card card-top">
+
+                <span class="status-icon">
+                    ✓
+                </span>
+
+                <div>
+                    <strong>
+                        System Online
+                    </strong>
+
+                    <small>
+                        All services operational
+                    </small>
+                </div>
+
+            </div>
+
+
+            <!-- Floating developer card -->
+
+            <div class="floating-card card-bottom">
+
+                <span class="code-icon">
+                    &lt;/&gt;
+                </span>
+
+                <div>
+                    <strong>
+                        Full Stack
+                    </strong>
+
+                    <small>
+                        Web & Mobile Development
+                    </small>
+                </div>
+
+            </div>
+
+
+            <!-- Technology card -->
+
+            <div class="floating-card card-side">
+
+                <span>
+                    ⚡
+                </span>
+
+                <div>
+                    <strong>
+                        10+
+                    </strong>
+
+                    <small>
+                        Technologies
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DEVELOPER TERMINAL
+    ========================== -->
+
+    <section class="terminal-section section reveal">
+
+        <div class="terminal">
+
+            <div class="terminal-header">
+
+                <div class="terminal-controls">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span class="terminal-title">
+                    anfred@portfolio ~ about
+                </span>
+
+            </div>
+
+
+            <div class="terminal-body">
+
+                <p>
+                    <span class="terminal-green">➜</span>
+                    <span class="terminal-blue">~</span>
+                    whoami
+                </p>
+
+                <p class="terminal-output">
+                    Anfred Albit — Full Stack Developer
+                </p>
+
+
+                <p>
+                    <span class="terminal-green">➜</span>
+                    <span class="terminal-blue">~</span>
+                    focus
+                </p>
+
+                <p class="terminal-output">
+                    Web Applications · APIs · Databases · Mobile
+                </p>
+
+
+                <p>
+                    <span class="terminal-green">➜</span>
+                    <span class="terminal-blue">~</span>
+                    stack
+                </p>
+
+                <p class="terminal-output">
+                    Angular · Laravel · Next.js · TypeScript · Supabase
+                </p>
+
+
+                <p>
+                    <span class="terminal-green">➜</span>
+                    <span class="terminal-blue">~</span>
+                    status
+                </p>
+
+                <p class="terminal-output success">
+                    ● Building something awesome...
+                </p>
+
+
+                <p>
+                    <span class="terminal-green">➜</span>
+                    <span class="terminal-blue">~</span>
+                    <span class="terminal-cursor"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROFILE / EDUCATION
+    ========================== -->
+
+    <section class="details section">
+
+
+        <!-- Profile -->
+
+        <article class="card reveal">
+
+            <span class="card-number">
+                01
+            </span>
+
+            <span class="card-label">
+                03 / Profile
+            </span>
+
+            <h2>
+                About Me
+            </h2>
+
+            <p>
+                I'm a Full Stack Developer passionate about creating
+                reliable, user-friendly applications from concept
+                to deployment.
+            </p>
+
+            <p>
+                I enjoy solving problems through software and exploring
+                technologies that allow applications to become faster,
+                cleaner, and easier to maintain.
+            </p>
+
+        </article>
+
+
+        <!-- Education -->
+
+        <article class="card reveal">
+
+            <span class="card-number">
+                02
+            </span>
+
+            <span class="card-label">
+                04 / Education
+            </span>
+
+            <h2>
+                Education
+            </h2>
+
+            <div class="info-block">
+
+                <span class="info-icon">
+                    ◈
+                </span>
+
+                <strong>
+                    Bachelor of Science in
+                    Information Technology
+                </strong>
+
+                <span>
+                    Information Technology
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- =========================
+             TECH STACK
+        ========================== -->
+
+        <article class="card stack-card reveal">
+
+            <span class="card-number">
+                03
+            </span>
+
+            <span class="card-label">
+                05 / Technology
+            </span>
+
+            <h2>
+                Tech Stack
+            </h2>
+
+            <p class="card-description">
+                Technologies and tools I use to design, develop,
+                test, and maintain applications.
+            </p>
+
+
+            <div class="stack-grid">
+
+
+                <!-- Frontend -->
+
+                <div class="stack-group">
+
+                    <div class="stack-heading">
+
+                        <span class="stack-index">
+                            01
+                        </span>
+
+                        <h3>
+                            Frontend
+                        </h3>
+
+                    </div>
+
+                    <div class="tags">
+
+                        <span>Angular</span>
+                        <span>Ionic Angular</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>TypeScript</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Backend -->
+
+                <div class="stack-group">
+
+                    <div class="stack-heading">
+
+                        <span class="stack-index">
+                            02
+                        </span>
+
+                        <h3>
+                            Backend
+                        </h3>
+
+                    </div>
+
+                    <div class="tags">
+
+                        <span>Laravel</span>
+                        <span>PHP</span>
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                        <span>REST API</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Database -->
+
+                <div class="stack-group">
+
+                    <div class="stack-heading">
+
+                        <span class="stack-index">
+                            03
+                        </span>
+
+                        <h3>
+                            Database
+                        </h3>
+
+                    </div>
+
+                    <div class="tags">
+
+                        <span>MySQL</span>
+                        <span>PostgreSQL</span>
+                        <span>Supabase</span>
+                        <span>Firebase</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tools -->
+
+                <div class="stack-group">
+
+                    <div class="stack-heading">
+
+                        <span class="stack-index">
+                            04
+                        </span>
+
+                        <h3>
+                            Tools & Mobile
+                        </h3>
+
+                    </div>
+
+                    <div class="tags">
+
+                        <span>Android Studio</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>Figma</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =========================
+             DEVELOPMENT
+        ========================== -->
+
+        <article class="card reveal">
+
+            <span class="card-number">
+                04
+            </span>
+
+            <span class="card-label">
+                06 / Development
+            </span>
+
+            <h2>
+                What I Build
+            </h2>
+
+            <ul>
+
+                <li>
+                    Responsive Web Applications
+                </li>
+
+                <li>
+                    REST API Development
+                </li>
+
+                <li>
+                    Authentication & Authorization
+                </li>
+
+                <li>
+                    Database Management
+                </li>
+
+                <li>
+                    Full Stack Applications
+                </li>
+
+                <li>
+                    Mobile Applications
+                </li>
+
+            </ul>
+
+        </article>
+
+
+        <!-- =========================
+             ACHIEVEMENT
+        ========================== -->
+
+        <article class="card achievement-card reveal">
+
+            <span class="card-number">
+                05
+            </span>
+
+            <span class="card-label">
+                07 / Achievement
+            </span>
+
+            <h2>
+                Certificate
+            </h2>
+
+            <div class="certificate">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    Programmer of the Year
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <article class="card reveal">
+
+            <span class="card-number">
+                06
+            </span>
+
+            <span class="card-label">
+                08 / Contact
+            </span>
+
+            <h2>
+                Contact
+            </h2>
+
+            <div class="contact-info">
+
+                <div>
+
+                    <small>
+                        Email
+                    </small>
+
+                    <span>
+                        anfredalbit11052@gmail.com
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <small>
+                        Location
+                    </small>
+
+                    <span>
+                        Panabo City, Davao del Norte,
+                        Philippines
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- =========================
+         PHILOSOPHY
+    ========================== -->
+
+    <section class="philosophy section reveal">
+
+        <div class="philosophy-card">
+
+            <span class="section-tag">
+                09 / Developer Philosophy
+            </span>
+
+            <h2>
+                Build.
+                <span>
+                    Learn.
+                </span>
+                Improve.
+            </h2>
+
+            <p>
+                I believe good software is not only about writing code.
+                It's about understanding problems, creating useful
+                solutions, and continuously improving the way we build.
+            </p>
+
+            <div class="philosophy-line"></div>
+
+            <div class="philosophy-meta">
+
+                <span>
+                    &lt;code /&gt;
+                </span>
+
+                <span>
+                    learn continuously
+                </span>
+
+                <span>
+                    build intentionally
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="about-cta section reveal">
+
+        <div class="cta-glow"></div>
+
+        <span class="section-tag">
+            10 / Let's Connect
+        </span>
+
+        <h2>
+            Let's build something
+            <span>
+                meaningful.
+            </span>
+        </h2>
+
+        <p>
+            Have an idea, project, or opportunity?
+            Let's turn it into something useful.
         </p>
 
-        <a routerLink="/contact" class="btn-primary">
-            Contact Me <b>↗</b>
+        <a
+            routerLink="/contact"
+            class="btn-primary"
+        >
+            <span>
+                Get In Touch
+            </span>
+
+            <b>
+                ↗
+            </b>
         </a>
-    </div>
 
-    <div class="hero-image">
-        <div class="image-glow"></div>
-
-        <div class="image-ring">
-            <div class="image-circle">
-                <img src="images/profile.png" alt="Anfred Albit">
-            </div>
-        </div>
-
-        <div class="floating-card">
-            <div>
-                <strong>Full Stack</strong>
-                <small>Web & Mobile Development</small>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="details section">
-
-    <article class="card about-card">
-        <span class="card-label">02 / Profile</span>
-        <h2>About Me</h2>
-
-        <p>
-            I'm a Full Stack Developer passionate about building reliable,
-            user-friendly applications from concept to deployment. I work
-            mainly with Angular on the frontend and Laravel or Next.js on
-            the backend.
-        </p>
-
-        <p>
-            I also work with MySQL, PostgreSQL, and Supabase for data
-            management and authentication, while using Ionic Angular and
-            Android Studio for mobile development.
-        </p>
-    </article>
-
-    <article class="card">
-        <span class="card-label">03 / Education</span>
-        <h2>Education</h2>
-
-        <div class="info-block">
-            <strong>Bachelor of Science in Information Technology</strong>
-        </div>
-    </article>
-
-    <article class="card stack-card">
-        <span class="card-label">04 / Technology</span>
-        <h2>Tech Stack</h2>
-
-        <div class="stack-grid">
-            <div class="stack-group">
-                <h3>Frontend</h3>
-                <div class="tags">
-                    <span>Angular</span>
-                    <span>Ionic Angular</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>TypeScript</span>
-                </div>
-            </div>
-
-            <div class="stack-group">
-                <h3>Backend</h3>
-                <div class="tags">
-                    <span>Laravel</span>
-                    <span>PHP</span>
-                    <span>Next.js</span>
-                    <span>Node.js</span>
-                </div>
-            </div>
-
-            <div class="stack-group">
-                <h3>Database</h3>
-                <div class="tags">
-                    <span>MySQL</span>
-                    <span>PostgreSQL</span>
-                    <span>Supabase</span>
-                    <span>Firebase</span>
-                </div>
-            </div>
-
-            <div class="stack-group">
-                <h3>Tools & Mobile</h3>
-                <div class="tags">
-                    <span>Android Studio</span>
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>VS Code</span>
-                    <span>Figma</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article class="card">
-        <span class="card-label">05 / Development</span>
-        <h2>Development</h2>
-
-        <ul>
-            <li>Responsive Web Applications</li>
-            <li>REST API Development</li>
-            <li>Authentication & Authorization</li>
-            <li>Database Management</li>
-            <li>Full Stack Development</li>
-            <li>Mobile Application Development</li>
-        </ul>
-    </article>
-
-    <article class="card">
-        <span class="card-label">06 / Achievement</span>
-        <h2>Certificate</h2>
-
-        <div class="certificate">
-            <strong>2026</strong>
-            <span>Programmer of the Year</span>
-        </div>
-    </article>
-
-    <article class="card">
-        <span class="card-label">07 / Contact</span>
-        <h2>Contact</h2>
-
-        <div class="contact-info">
-            <div>
-                <small>Email</small>
-                <span>anfredalbit11052@gmail.com</span>
-            </div>
-
-            <div>
-                <small>Location</small>
-                <span>Panabo City, Davao del Norte, Philippines</span>
-            </div>
-        </div>
-    </article>
-
-</section>
+    </section>
 
 </section>

@@ -1,106 +1,280 @@
-<section class="contact">
+<section
+    class="contact"
+    (mousemove)="onMouseMove($event)"
+    [style.--mouse-x.px]="mouseX"
+    [style.--mouse-y.px]="mouseY"
+>
+    <!-- BACKGROUND -->
+    <div class="grid-background"></div>
+    <div class="cursor-glow"></div>
+
     <div class="glow glow-one"></div>
     <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
 
-<div class="contact-container section">
-
-    <header class="contact-header">
-        <span class="section-tag">05 / Contact</span>
-
-        <h1>
-            Let's build something <span>great.</span>
-        </h1>
-
-        <p>
-            Have a project, opportunity, or idea in mind?
-            I'd be happy to hear about it and discuss how we can
-            turn it into something useful.
-        </p>
-
-        <div class="contact-details">
-
-            <a href="mailto:anfredalbit110525@gmail.com" class="contact-item">
-                <div class="icon">✉</div>
-                <div>
-                    <small>Email</small>
-                    <strong>anfredalbit110525@gmail.com</strong>
-                </div>
-            </a>
-
-            <a href="tel:09158066395" class="contact-item">
-                <div class="icon">☎</div>
-                <div>
-                    <small>Phone</small>
-                    <strong>09158066395</strong>
-                </div>
-            </a>
-
-            <div class="contact-item">
-                <div class="icon">⌖</div>
-                <div>
-                    <small>Location</small>
-                    <strong>Tagum City, Davao del Norte</strong>
-                </div>
-            </div>
-
-        </div>
-    </header>
-
-    <div class="contact-form-wrapper">
-
-        <div class="form-heading">
-            <span>Send a message</span>
-            <p>I'll get back to you as soon as possible.</p>
-        </div>
-
-        <form>
-
-            <div class="form-row">
-                <div class="input-group">
-                    <label for="name">Name</label>
-                    <input
-                        id="name"
-                        type="text"
-                        placeholder="Your name"
-                    >
-                </div>
-
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input
-                        id="email"
-                        type="email"
-                        placeholder="you@example.com"
-                    >
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label for="subject">Subject</label>
-                <input
-                    id="subject"
-                    type="text"
-                    placeholder="What would you like to discuss?"
-                >
-            </div>
-
-            <div class="input-group">
-                <label for="message">Message</label>
-                <textarea
-                    id="message"
-                    rows="6"
-                    placeholder="Tell me about your project..."
-                ></textarea>
-            </div>
-
-            <button type="submit" class="btn">
-                <span>Send Message</span>
-                <span class="arrow">→</span>
-            </button>
-
-        </form>
+    <!-- DECORATIVE CODE -->
+    <div class="floating-code code-one">
+        const message = "Hello";
     </div>
 
-</div>
+    <div class="floating-code code-two">
+        response.status(200);
+    </div>
+
+    <div class="floating-code code-three">
+        git push origin main
+    </div>
+
+    <div class="contact-container section">
+
+        <!-- LEFT SIDE -->
+        <header class="contact-header">
+
+            <div class="header-top">
+                <span class="section-tag">
+                    05 / Contact
+                </span>
+            </div>
+
+            <p class="eyebrow">
+                Let's Connect
+            </p>
+
+            <h1>
+                Let's build something
+                <span>great.</span>
+            </h1>
+
+            <p class="contact-description">
+                Have a project, opportunity, or idea in mind?
+                I'd be happy to hear about it and discuss how we can
+                turn it into something useful.
+            </p>
+
+            <!-- CONTACT INFORMATION -->
+            <div class="contact-details">
+
+                <a
+                    href="mailto:anfredalbit110525@gmail.com"
+                    class="contact-item"
+                >
+                    <div class="icon">
+                        ✉
+                    </div>
+
+                    <div class="contact-item-content">
+                        <small>Email</small>
+                        <strong>
+                            anfredalbit110525@gmail.com
+                        </strong>
+                    </div>
+
+                    <span class="item-arrow">↗</span>
+                </a>
+
+                <a
+                    href="tel:09158066395"
+                    class="contact-item"
+                >
+                    <div class="icon">
+                        ☎
+                    </div>
+
+                    <div class="contact-item-content">
+                        <small>Phone</small>
+                        <strong>
+                            09158066395
+                        </strong>
+                    </div>
+
+                    <span class="item-arrow">↗</span>
+                </a>
+
+                <div class="contact-item location-item">
+                    <div class="icon">
+                        ⌖
+                    </div>
+
+                    <div class="contact-item-content">
+                        <small>Location</small>
+                        <strong>
+                            Tagum City, Davao del Norte
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MINI TERMINAL -->
+            <div class="terminal-card">
+
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span>contact.ts</span>
+                </div>
+
+                <div class="terminal-body">
+                    <div>
+                        <span class="line-number">01</span>
+                        <span class="code-keyword">const</span>
+                        <span class="code-variable">developer</span>
+                        <span class="code-symbol">=</span>
+                        <span class="code-value">"Anfred"</span>;
+                    </div>
+
+                    <div>
+                        <span class="line-number">02</span>
+                        <span class="code-keyword">const</span>
+                        <span class="code-variable">status</span>
+                        <span class="code-symbol">=</span>
+                        <span class="code-value">"open"</span>;
+                    </div>
+
+                    <div>
+                        <span class="line-number">03</span>
+                        <span class="code-keyword">return</span>
+                        <span class="code-value">"Let's build."</span>;
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-form-wrapper">
+
+            <div class="form-header">
+
+                <div>
+                    <span class="form-label">
+                        CONTACT FORM
+                    </span>
+
+                    <h2>
+                        Send a message
+                    </h2>
+                </div>
+
+            </div>
+
+            <p class="form-description">
+                Tell me a little about your project and I'll
+                get back to you as soon as possible.
+            </p>
+
+            <form
+                (ngSubmit)="submitForm()"
+                #contactForm="ngForm"
+            >
+
+                <!-- NAME + EMAIL -->
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label for="name">
+                            <span>01</span>
+                            Name
+                        </label>
+
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Your name"
+                            [(ngModel)]="formData.name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            <span>02</span>
+                            Email
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            [(ngModel)]="formData.email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <!-- SUBJECT -->
+                <div class="input-group">
+
+                    <label for="subject">
+                        <span>03</span>
+                        Subject
+                    </label>
+
+                    <input
+                        id="subject"
+                        name="subject"
+                        type="text"
+                        placeholder="What would you like to discuss?"
+                        [(ngModel)]="formData.subject"
+                        required
+                    >
+
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="input-group">
+
+                    <label for="message">
+                        <span>04</span>
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Tell me about your project..."
+                        [(ngModel)]="formData.message"
+                        required
+                    ></textarea>
+
+                </div>
+
+                <!-- BUTTON -->
+                <button
+                    type="submit"
+                    class="btn"
+                    [disabled]="isSending"
+                >
+                    <span>
+                        {{ isSending ? 'Preparing...' : 'Send Message' }}
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+                </button>
+
+            </form>
+
+            <div class="form-note">
+                Your message will open your default email client.
+            </div>
+
+        </div>
+
+    </div>
 
 </section>

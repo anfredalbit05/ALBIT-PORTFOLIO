@@ -1,77 +1,278 @@
-<section class="projects">
+<section
+    class="projects"
+    (mousemove)="onMouseMove($event)"
+    [style.--mouse-x.px]="mouseX"
+    [style.--mouse-y.px]="mouseY"
+>
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="grid-background"></div>
+
+    <div class="cursor-glow"></div>
+
     <div class="glow glow-one"></div>
     <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
+
+
+    <!-- =========================
+         FLOATING CODE
+    ========================== -->
+
+    <div class="floating-code code-one">
+        git push origin main
+    </div>
+
+    <div class="floating-code code-two">
+        npm run build
+    </div>
+
+    <div class="floating-code code-three">
+        const projects = [];
+    </div>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
 
     <div class="projects-container section">
 
-        <header class="projects-header">
-            <span class="section-tag">03 / Portfolio</span>
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="projects-header reveal">
+
+            <span class="section-tag">
+                03 / Portfolio
+            </span>
+
+            <p class="eyebrow">
+                Selected Work
+            </p>
 
             <h1>
-                Things I've <span>built.</span>
+                Things I've
+                <span>
+                    built.
+                </span>
             </h1>
 
-            <p>
+            <p class="projects-intro">
                 A selection of projects I've developed using modern
-                frontend, backend, database, and full-stack technologies.
+                frontend, backend, database, API, and full-stack
+                technologies.
             </p>
+
         </header>
+
+
+        <!-- =========================
+             PROJECT STATS
+        ========================== -->
+
+        <section class="project-stats reveal">
+
+            <div class="project-stat">
+
+                <strong>
+                    03+
+                </strong>
+
+                <span>
+                    Projects Built
+                </span>
+
+            </div>
+
+            <div class="project-stat">
+
+                <strong>
+                    10+
+                </strong>
+
+                <span>
+                    Technologies
+                </span>
+
+            </div>
+
+            <div class="project-stat">
+
+                <strong>
+                    Full Stack
+                </strong>
+
+                <span>
+                    Development
+                </span>
+
+            </div>
+
+            <div class="project-stat">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    Active Development
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT GRID
+        ========================== -->
 
         <div class="projects-grid">
 
-            <!-- PROJECT 01 -->
-            <article class="project-card">
+
+            <!-- =========================
+                 PROJECT 01
+            ========================== -->
+
+            <article
+                class="project-card featured reveal"
+            >
+
+                <div class="featured-label">
+                    <span>
+                        ★
+                    </span>
+
+                    Featured Project
+                </div>
+
+
+                <!-- Image -->
 
                 <div class="project-image">
+
                     <img
                         src="/images/portfolio.png"
                         alt="Personal Portfolio"
                     >
 
+                    <div class="image-gradient"></div>
+
                     <div class="project-overlay">
-                        <span>Featured Project</span>
+
+                        <span>
+                            Featured Project
+                        </span>
+
                     </div>
+
+
+                    <div class="image-corner">
+
+                        <span>
+                            01
+                        </span>
+
+                    </div>
+
                 </div>
+
+
+                <!-- Content -->
 
                 <div class="project-content">
 
                     <div class="project-meta">
-                        <span>01</span>
-                        <span>Frontend</span>
+
+                        <span>
+                            01
+                        </span>
+
+                        <span>
+                            Frontend
+                        </span>
+
                     </div>
 
-                    <h2>Personal Portfolio</h2>
+
+                    <h2>
+                        Personal Portfolio
+                    </h2>
+
 
                     <p>
-                        A modern and responsive developer portfolio built
-                        with Angular to showcase my skills, projects,
-                        technologies, and experience.
+                        A modern and responsive developer portfolio
+                        built with Angular to showcase my skills,
+                        projects, technologies, and professional
+                        development journey.
                     </p>
 
+
+                    <!-- Technologies -->
+
                     <div class="tech">
-                        <span>Angular</span>
-                        <span>TypeScript</span>
-                        <span>CSS</span>
+
+                        <span>
+                            Angular
+                        </span>
+
+                        <span>
+                            TypeScript
+                        </span>
+
+                        <span>
+                            CSS
+                        </span>
+
+                        <span>
+                            Responsive UI
+                        </span>
+
                     </div>
 
+
+                    <!-- Buttons -->
+
                     <div class="buttons">
+
                         <a
                             href="https://albit-portfolio.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="btn"
                         >
-                            Live Demo
-                            <b>↗</b>
+
+                            <span>
+                                Live Demo
+                            </span>
+
+                            <b>
+                                ↗
+                            </b>
+
                         </a>
 
                         <a
                             href="#"
                             class="btn-outline"
                         >
-                            GitHub
-                            <b>↗</b>
+
+                            <span>
+                                GitHub
+                            </span>
+
+                            <b>
+                                ↗
+                            </b>
+
                         </a>
+
                     </div>
 
                 </div>
@@ -79,59 +280,121 @@
             </article>
 
 
-            <!-- PROJECT 02 -->
-            <article class="project-card">
+            <!-- =========================
+                 PROJECT 02
+            ========================== -->
+
+            <article
+                class="project-card reveal"
+            >
 
                 <div class="project-image">
+
                     <img
                         src="/images/hiraya-cafe.png"
                         alt="Hiraya Cafe"
                     >
 
+                    <div class="image-gradient"></div>
+
                     <div class="project-overlay">
-                        <span>Web Project</span>
+
+                        <span>
+                            Web Project
+                        </span>
+
                     </div>
+
+                    <div class="image-corner">
+
+                        <span>
+                            02
+                        </span>
+
+                    </div>
+
                 </div>
+
 
                 <div class="project-content">
 
                     <div class="project-meta">
-                        <span>02</span>
-                        <span>Web Application</span>
+
+                        <span>
+                            02
+                        </span>
+
+                        <span>
+                            Web Application
+                        </span>
+
                     </div>
 
-                    <h2>Hiraya Cafe</h2>
+
+                    <h2>
+                        Hiraya Cafe
+                    </h2>
+
 
                     <p>
                         A modern cafe website designed to present
                         Hiraya Cafe's brand, menu, services, and
-                        customer experience through a clean interface.
+                        customer experience through a clean,
+                        responsive interface.
                     </p>
 
+
                     <div class="tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
+
+                        <span>
+                            HTML5
+                        </span>
+
+                        <span>
+                            CSS3
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
                     </div>
 
+
                     <div class="buttons">
+
                         <a
                             href="https://hiraya-cafe-nine.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="btn"
                         >
-                            Live Demo
-                            <b>↗</b>
+
+                            <span>
+                                Live Demo
+                            </span>
+
+                            <b>
+                                ↗
+                            </b>
+
                         </a>
 
                         <a
                             href="#"
                             class="btn-outline"
                         >
-                            GitHub
-                            <b>↗</b>
+
+                            <span>
+                                GitHub
+                            </span>
+
+                            <b>
+                                ↗
+                            </b>
+
                         </a>
+
                     </div>
 
                 </div>
@@ -139,76 +402,271 @@
             </article>
 
 
-          <!-- PROJECT 03 -->
-          <article class="project-card">
+            <!-- =========================
+                 PROJECT 03
+            ========================== -->
 
-              <div class="project-image">
-                  <img
-                      src="/images/atci-comsoc.png"
-                      alt="ATCI Comsoc"
-                  >
+            <article
+                class="project-card reveal"
+            >
 
-                  <div class="project-overlay">
-                      <span>Organization Website</span>
-                  </div>
-              </div>
+                <div class="project-image">
 
-              <div class="project-content">
+                    <img
+                        src="/images/atci-comsoc.png"
+                        alt="ATCI Comsoc"
+                    >
 
-                  <div class="project-meta">
-                      <span>03</span>
-                      <span>Web Application</span>
-                  </div>
+                    <div class="image-gradient"></div>
 
-                  <h2>ATCI Comsoc</h2>
+                    <div class="project-overlay">
 
-                  <p>
-                      A modern organization website developed for ATCI Comsoc
-                      to showcase its community, activities, announcements,
-                      projects, and digital presence through a clean and
-                      responsive interface.
-                  </p>
+                        <span>
+                            Organization Website
+                        </span>
 
-                  <div class="tech">
-                      <span>HTML5</span>
-                      <span>CSS3</span>
-                      <span>JavaScript</span>
-                  </div>
+                    </div>
 
-                  <div class="buttons">
+                    <div class="image-corner">
 
-                      <a
-                          href="https://atci-comsoc.vercel.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="btn"
-                      >
-                          Live Demo
-                          <b>↗</b>
-                      </a>
+                        <span>
+                            03
+                        </span>
 
-                      <a
-                          href="#"
-                          class="btn-outline"
-                      >
-                          GitHub
-                          <b>↗</b>
-                      </a>
+                    </div>
 
-                  </div>
+                </div>
 
-              </div>
 
-          </article>
+                <div class="project-content">
 
+                    <div class="project-meta">
+
+                        <span>
+                            03
+                        </span>
+
+                        <span>
+                            Web Application
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+                        ATCI Comsoc
+                    </h2>
+
+
+                    <p>
+                        A modern organization website developed
+                        for ATCI Comsoc to showcase its community,
+                        activities, announcements, projects,
+                        and digital presence through a clean
+                        and responsive interface.
+                    </p>
+
+
+                    <div class="tech">
+
+                        <span>
+                            HTML5
+                        </span>
+
+                        <span>
+                            CSS3
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                    </div>
+
+
+                    <div class="buttons">
+
+                        <a
+                            href="https://atci-comsoc.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn"
+                        >
+
+                            <span>
+                                Live Demo
+                            </span>
+
+                            <b>
+                                ↗
+                            </b>
+
+                        </a>
+
+                        <a
+                            href="#"
+                            class="btn-outline"
+                        >
+
+                            <span>
+                                GitHub
+                            </span>
+
+                            <b>
+                                ↗
+                            </b>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 PROJECT 04
+                 COMING SOON
+            ========================== -->
+
+            <article
+                class="project-card coming-soon reveal"
+            >
+
+                <div class="coming-soon-image">
+
+                    <div class="coming-icon">
+                        &lt;/&gt;
+                    </div>
+
+                    <span>
+                        IN DEVELOPMENT
+                    </span>
+
+                    <div class="scan-line"></div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+
+                        <span>
+                            04
+                        </span>
+
+                        <span>
+                            Coming Soon
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+                        Next Project
+                    </h2>
+
+
+                    <p>
+                        Another project is currently being planned
+                        and developed. More details will be available
+                        once the project reaches its next stage.
+                    </p>
+
+
+                    <div class="tech">
+
+                        <span>
+                            Angular
+                        </span>
+
+                        <span>
+                            Laravel
+                        </span>
+
+                        <span>
+                            API
+                        </span>
+
+                    </div>
+
+
+                    <div class="coming-status">
+
+                        <span class="status-dot"></span>
+
+                        Currently building...
+
+                    </div>
+
+                </div>
+
+            </article>
 
         </div>
 
-        <div class="projects-footer">
+
+        <!-- =========================
+             PROJECT FOOTER
+        ========================== -->
+
+        <div class="projects-footer reveal">
+
             <span></span>
-            <p>More projects coming soon.</p>
+
+            <p>
+                More projects coming soon.
+            </p>
+
             <span></span>
+
         </div>
+
+
+        <!-- =========================
+             PROJECT CTA
+        ========================== -->
+
+        <section class="projects-cta reveal">
+
+            <div class="cta-glow"></div>
+
+            <span class="section-tag">
+                04 / What's Next
+            </span>
+
+            <h2>
+                The next project
+                <span>
+                    could be yours.
+                </span>
+            </h2>
+
+            <p>
+                I'm always interested in building useful applications,
+                learning new technologies, and working on challenging
+                ideas.
+            </p>
+
+            <a
+                routerLink="/contact"
+                class="btn"
+            >
+
+                <span>
+                    Start a Conversation
+                </span>
+
+                <b>
+                    ↗
+                </b>
+
+            </a>
+
+        </section>
 
     </div>
+
 </section>

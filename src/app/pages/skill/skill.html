@@ -1,138 +1,326 @@
-<section class="skills">
+<section
+    class="skills"
+    (mousemove)="onMouseMove($event)"
+    [style.--mouse-x.px]="mouseX"
+    [style.--mouse-y.px]="mouseY"
+>
+    <!-- BACKGROUND -->
+    <div class="grid-background"></div>
+    <div class="cursor-glow"></div>
+
     <div class="glow glow-one"></div>
     <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
 
-<div class="skills-container section">
+    <!-- FLOATING CODE -->
+    <div class="floating-code code-one">const skills = [];</div>
+    <div class="floating-code code-two">npm run build</div>
+    <div class="floating-code code-three">git push origin main</div>
 
-    <header class="skills-header">
-        <span class="section-tag">04 / Expertise</span>
+    <div class="skills-container section">
 
-        <h1>
-            Technologies I <span>work with.</span>
-        </h1>
-
-        <p>
-            A collection of technologies and tools I use to build
-            modern web applications, APIs, databases, and mobile apps.
-        </p>
-    </header>
-
-    <div class="skills-grid">
-
-        <article class="skill-card">
-            <div class="card-top">
-                <div class="icon">&lt;/&gt;</div>
-                <span>01</span>
+        <!-- HEADER -->
+        <header class="skills-header">
+            <div class="header-top">
+                <span class="section-tag">04 / Expertise</span>
             </div>
 
-            <h2>Frontend</h2>
-            <p>Building responsive and interactive user interfaces.</p>
+            <p class="eyebrow">My Technical Stack</p>
 
-            <div class="tech-list">
-                <span>Angular</span>
-                <span>Ionic Angular</span>
-                <span>TypeScript</span>
-                <span>JavaScript</span>
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>Bootstrap</span>
+            <h1>
+                Technologies I
+                <span>work with.</span>
+            </h1>
+
+            <p class="skills-description">
+                A collection of technologies and tools I use to build
+                modern web applications, APIs, databases, and mobile
+                applications.
+            </p>
+
+            <!-- HEADER META -->
+            <div class="header-meta">
+                <div>
+                    <strong>06</strong>
+                    <span>Core Areas</span>
+                </div>
+
+                <div>
+                    <strong>20+</strong>
+                    <span>Technologies</span>
+                </div>
+
+                <div>
+                    <strong>2026</strong>
+                    <span>Current Stack</span>
+                </div>
             </div>
-        </article>
+        </header>
 
-        <article class="skill-card featured">
-            <div class="card-top">
-                <div class="icon">⚡</div>
-                <span>02</span>
+        <!-- SKILLS GRID -->
+        <div class="skills-grid">
+
+            <!-- FRONTEND -->
+            <article class="skill-card reveal-card">
+                <div class="card-number">01</div>
+
+                <div class="card-top">
+                    <div class="icon">
+                        &lt;/&gt;
+                    </div>
+
+                    <span class="category">
+                        FRONTEND
+                    </span>
+                </div>
+
+                <h2>Frontend</h2>
+
+                <p>
+                    Building responsive, interactive, and user-friendly
+                    interfaces for modern web applications.
+                </p>
+
+                <div class="skill-level">
+                    <div class="level-info">
+                        <span>Experience</span>
+                        <span>Advanced</span>
+                    </div>
+
+                    <div class="level-bar">
+                        <span style="width: 90%"></span>
+                    </div>
+                </div>
+
+                <div class="tech-list">
+                    <span>Angular</span>
+                    <span>Ionic Angular</span>
+                    <span>TypeScript</span>
+                    <span>JavaScript</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Bootstrap</span>
+                </div>
+            </article>
+
+            <!-- BACKEND -->
+            <article class="skill-card featured reveal-card">
+                <div class="featured-label">
+                    Core Stack
+                </div>
+
+                <div class="card-number">02</div>
+
+                <div class="card-top">
+                    <div class="icon">
+                        ⚡
+                    </div>
+
+                    <span class="category">
+                        BACKEND
+                    </span>
+                </div>
+
+                <h2>Backend</h2>
+
+                <p>
+                    Developing APIs, business logic, authentication,
+                    and server-side systems for full-stack applications.
+                </p>
+
+                <div class="skill-level">
+                    <div class="level-info">
+                        <span>Experience</span>
+                        <span>Advanced</span>
+                    </div>
+
+                    <div class="level-bar">
+                        <span style="width: 87%"></span>
+                    </div>
+                </div>
+
+                <div class="tech-list">
+                    <span>Laravel</span>
+                    <span>PHP</span>
+                    <span>Next.js</span>
+                    <span>Node.js</span>
+                    <span>REST API</span>
+                </div>
+            </article>
+
+            <!-- DATABASE -->
+            <article class="skill-card reveal-card">
+                <div class="card-number">03</div>
+
+                <div class="card-top">
+                    <div class="icon">
+                        ◈
+                    </div>
+
+                    <span class="category">
+                        DATABASE
+                    </span>
+                </div>
+
+                <h2>Database</h2>
+
+                <p>
+                    Designing, managing, and integrating application
+                    databases with secure authentication systems.
+                </p>
+
+                <div class="skill-level">
+                    <div class="level-info">
+                        <span>Experience</span>
+                        <span>Advanced</span>
+                    </div>
+
+                    <div class="level-bar">
+                        <span style="width: 85%"></span>
+                    </div>
+                </div>
+
+                <div class="tech-list">
+                    <span>MySQL</span>
+                    <span>PostgreSQL</span>
+                    <span>Supabase</span>
+                    <span>Firebase</span>
+                </div>
+            </article>
+
+            <!-- MOBILE -->
+            <article class="skill-card reveal-card">
+                <div class="card-number">04</div>
+
+                <div class="card-top">
+                    <div class="icon">
+                        ▣
+                    </div>
+
+                    <span class="category">
+                        MOBILE
+                    </span>
+                </div>
+
+                <h2>Mobile</h2>
+
+                <p>
+                    Creating cross-platform and Android applications
+                    using modern mobile development technologies.
+                </p>
+
+                <div class="skill-level">
+                    <div class="level-info">
+                        <span>Experience</span>
+                        <span>Intermediate</span>
+                    </div>
+
+                    <div class="level-bar">
+                        <span style="width: 76%"></span>
+                    </div>
+                </div>
+
+                <div class="tech-list">
+                    <span>Ionic Angular</span>
+                    <span>Android Studio</span>
+                    <span>Android Development</span>
+                </div>
+            </article>
+
+            <!-- TOOLS -->
+            <article class="skill-card reveal-card">
+                <div class="card-number">05</div>
+
+                <div class="card-top">
+                    <div class="icon">
+                        ◫
+                    </div>
+
+                    <span class="category">
+                        TOOLS
+                    </span>
+                </div>
+
+                <h2>Tools</h2>
+
+                <p>
+                    Tools I use for development, version control,
+                    interface design, testing, and collaboration.
+                </p>
+
+                <div class="skill-level">
+                    <div class="level-info">
+                        <span>Experience</span>
+                        <span>Advanced</span>
+                    </div>
+
+                    <div class="level-bar">
+                        <span style="width: 88%"></span>
+                    </div>
+                </div>
+
+                <div class="tech-list">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>VS Code</span>
+                    <span>Figma</span>
+                    <span>XAMPP</span>
+                </div>
+            </article>
+
+            <!-- LEARNING -->
+            <article class="skill-card learning reveal-card">
+                <div class="card-number">06</div>
+
+                <div class="card-top">
+                    <div class="icon">
+                        ↗
+                    </div>
+
+                    <span class="category">
+                        LEARNING
+                    </span>
+                </div>
+
+                <h2>Currently Learning</h2>
+
+                <p>
+                    Technologies and areas I am currently exploring
+                    to expand my development capabilities.
+                </p>
+
+                <div class="skill-level">
+                    <div class="level-info">
+                        <span>Progress</span>
+                        <span>Growing</span>
+                    </div>
+
+                    <div class="level-bar learning-bar">
+                        <span style="width: 62%"></span>
+                    </div>
+                </div>
+
+                <div class="tech-list">
+                    <span>ASP.NET</span>
+                    <span>Cloud Computing</span>
+                    <span>UI/UX Design</span>
+                    <span>Cybersecurity</span>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="skills-footer">
+            <span></span>
+
+            <div class="footer-content">
+                <span class="terminal-symbol">›_</span>
+                <p>Always learning. Always building.</p>
             </div>
 
-            <h2>Backend</h2>
-            <p>Developing APIs, business logic, and server-side systems.</p>
-
-            <div class="tech-list">
-                <span>Laravel</span>
-                <span>PHP</span>
-                <span>Next.js</span>
-                <span>Node.js</span>
-                <span>REST API</span>
-            </div>
-        </article>
-
-        <article class="skill-card">
-            <div class="card-top">
-                <div class="icon">◈</div>
-                <span>03</span>
-            </div>
-
-            <h2>Database</h2>
-            <p>Designing and managing application data and authentication.</p>
-
-            <div class="tech-list">
-                <span>MySQL</span>
-                <span>PostgreSQL</span>
-                <span>Supabase</span>
-                <span>Firebase</span>
-            </div>
-        </article>
-
-        <article class="skill-card">
-            <div class="card-top">
-                <div class="icon">▣</div>
-                <span>04</span>
-            </div>
-
-            <h2>Mobile</h2>
-            <p>Creating mobile applications for Android platforms.</p>
-
-            <div class="tech-list">
-                <span>Ionic Angular</span>
-                <span>Android Studio</span>
-                <span>Android Development</span>
-            </div>
-        </article>
-
-        <article class="skill-card">
-            <div class="card-top">
-                <div class="icon">◫</div>
-                <span>05</span>
-            </div>
-
-            <h2>Tools</h2>
-            <p>Tools I use for development, design, and collaboration.</p>
-
-            <div class="tech-list">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>VS Code</span>
-                <span>Figma</span>
-                <span>XAMPP</span>
-            </div>
-        </article>
-
-        <article class="skill-card learning">
-            <div class="card-top">
-                <div class="icon">↗</div>
-                <span>06</span>
-            </div>
-
-            <h2>Currently Learning</h2>
-            <p>Technologies and areas I am currently exploring.</p>
-
-            <div class="tech-list">
-                <span>ASP.NET</span>
-                <span>Cloud Computing</span>
-                <span>UI/UX Design</span>
-                <span>Cybersecurity</span>
-            </div>
-        </article>
+            <span></span>
+        </div>
 
     </div>
-
-    <div class="skills-footer">
-        <span></span>
-        <p>Always learning. Always building.</p>
-        <span></span>
-    </div>
-
-</div>
-
 </section>
