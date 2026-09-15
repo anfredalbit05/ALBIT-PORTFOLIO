@@ -1,115 +1,209 @@
-<nav class="navbar">
-    <div class="nav-container">
+<div
+    class="app-shell"
+    (mousemove)="onMouseMove($event)"
+    [style.--mouse-x.px]="mouseX"
+    [style.--mouse-y.px]="mouseY"
+>
 
-        <a routerLink="/" class="logo" (click)="closeMenu()">
-            <img src="images/logo.png" alt="Anfred Albit">
-        </a>
+    <!-- =========================
+         CURSOR GLOW
+    ========================== -->
 
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Toggle navigation"
-            [attr.aria-expanded]="menuOpen"
-            (click)="toggleMenu()"
-        >
-            <span [class.open]="menuOpen"></span>
-            <span [class.open]="menuOpen"></span>
-            <span [class.open]="menuOpen"></span>
-        </button>
+    <div class="app-cursor-glow"></div>
 
-        <ul class="nav-links" [class.open]="menuOpen">
 
-            <li>
-                <a
-                    routerLink="/"
-                    routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    (click)="closeMenu()"
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <!-- LOGO -->
+
+            <a
+                routerLink="/"
+                class="logo"
+                (click)="closeMenu()"
+            >
+
+                <img
+                    src="images/logo.png"
+                    alt="Anfred Albit"
                 >
-                    <span>01</span>
-                    Home
-                </a>
-            </li>
 
-            <li>
-                <a
-                    routerLink="/about"
-                    routerLinkActive="active"
-                    (click)="closeMenu()"
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                [attr.aria-expanded]="menuOpen"
+                (click)="toggleMenu()"
+            >
+
+                <span [class.open]="menuOpen"></span>
+                <span [class.open]="menuOpen"></span>
+                <span [class.open]="menuOpen"></span>
+
+            </button>
+
+
+            <!-- NAVIGATION -->
+
+            <ul
+                class="nav-links"
+                [class.open]="menuOpen"
+            >
+
+                <li>
+
+                    <a
+                        routerLink="/"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{
+                            exact: true
+                        }"
+                        (click)="closeMenu()"
+                    >
+
+                        <span>01</span>
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a
+                        routerLink="/about"
+                        routerLinkActive="active"
+                        (click)="closeMenu()"
+                    >
+
+                        <span>02</span>
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a
+                        routerLink="/project"
+                        routerLinkActive="active"
+                        (click)="closeMenu()"
+                    >
+
+                        <span>03</span>
+                        Projects
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a
+                        routerLink="/skill"
+                        routerLinkActive="active"
+                        (click)="closeMenu()"
+                    >
+
+                        <span>04</span>
+                        Skills
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a
+                        routerLink="/contact"
+                        routerLinkActive="active"
+                        (click)="closeMenu()"
+                    >
+
+                        <span>05</span>
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <router-outlet></router-outlet>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="app-reveal">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <img
+                    src="images/logo.png"
+                    alt="Anfred Albit"
                 >
-                    <span>02</span>
-                    About
-                </a>
-            </li>
 
-            <li>
-                <a
-                    routerLink="/project"
-                    routerLinkActive="active"
-                    (click)="closeMenu()"
-                >
-                    <span>03</span>
-                    Projects
-                </a>
-            </li>
+                <div>
 
-            <li>
-                <a
-                    routerLink="/skill"
-                    routerLinkActive="active"
-                    (click)="closeMenu()"
-                >
-                    <span>04</span>
-                    Skills
-                </a>
-            </li>
+                    <strong>
+                        Anfred Albit
+                    </strong>
 
-            <li>
-                <a
-                    routerLink="/contact"
-                    routerLinkActive="active"
-                    (click)="closeMenu()"
-                >
-                    <span>05</span>
-                    Contact
-                </a>
-            </li>
+                    <span>
+                        Full Stack Developer
+                    </span>
 
-        </ul>
+                </div>
 
-    </div>
-</nav>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-
-<main>
-    <router-outlet></router-outlet>
-</main>
-
-<footer>
-    <div class="footer-content">
-
-        <div class="footer-brand">
-            <img src="images/logo.png" alt="Anfred Albit">
-
-            <div>
-                <strong>Anfred Albit</strong>
-                <span>Full Stack Developer</span>
             </div>
+
+
+            <div class="footer-right">
+
+                <span>
+                    © 2026 Anfred Albit
+                </span>
+
+                <span>
+                    All Rights Reserved.
+                </span>
+
+            </div>
+
         </div>
 
-        <div class="footer-right">
-            <span>© 2026 Anfred Albit</span>
-            <span>All Rights Reserved.</span>
-        </div>
+    </footer>
 
-    </div>
-</footer>
+</div>
